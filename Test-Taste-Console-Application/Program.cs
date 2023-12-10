@@ -1,16 +1,15 @@
-﻿using System;
-using System.IO;
-using System.Reflection;
-using log4net;
-using log4net.Config;
-using Microsoft.Extensions.DependencyInjection;
-using Test_Taste_Console_Application.Constants;
-using Test_Taste_Console_Application.Domain.Services;
-using Test_Taste_Console_Application.Domain.Services.Interfaces;
-using Test_Taste_Console_Application.Utilities;
-
-namespace Test_Taste_Console_Application
+﻿namespace Test_Taste_Console_Application
 {
+    using log4net;
+    using log4net.Config;
+    using Microsoft.Extensions.DependencyInjection;
+    using System;
+    using System.IO;
+    using System.Reflection;
+    using Test_Taste_Console_Application.Constants;
+    using Test_Taste_Console_Application.Domain.Services;
+    using Test_Taste_Console_Application.Domain.Services.Interfaces;
+    using Test_Taste_Console_Application.Utilities;
     class Program
     {
         static void Main(string[] args)
@@ -18,7 +17,7 @@ namespace Test_Taste_Console_Application
             var serviceCollection = new ServiceCollection();
             //The ConfigureServices function configures the services.
             ConfigureServices(serviceCollection);
-            
+
             //The RunServiceOperations function executes the code that can create the outputs.
             RunServiceOperations(serviceCollection);
         }
